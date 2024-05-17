@@ -11,7 +11,7 @@ const Main = () => {
     speedTime,
     setSpeedTime,
     topics,
-    // setTopics,
+    setTopics,
   } = useContext(AppContext);
   return screen === null || screen === "chooseMode" ? (
     <main className="mode">
@@ -73,19 +73,20 @@ const Main = () => {
     <main className="topic">
       <div className="topic-title">Wybierz temat</div>
       <div className="topic-main">
-        {topics.map((map) => {
-          return (
-            <Button
-              key={map.name}
-              className={map.active && "active"}
-              onClick={() => {
-                // const newTopics = topics;
-              }}
-            >
-              {map.name}
-            </Button>
-          );
-        })}
+        {topics.map((topic, index) => (
+          <Button
+            key={topic.name}
+            className={topic.active ? "active" : ""}
+            onClick={() => {
+              const newTopics = topics.map((t, i) =>
+                i === index ? { ...t, active: !t.active } : t
+              );
+              setTopics(newTopics);
+            }}
+          >
+            {topic.name}
+          </Button>
+        ))}
       </div>
       <div className="topic-confirm">
         <Button>start</Button>
