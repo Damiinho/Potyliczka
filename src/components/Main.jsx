@@ -15,7 +15,7 @@ const Main = () => {
   } = useContext(AppContext);
   return screen === null || screen === "chooseMode" ? (
     <main className="mode">
-      <div className="mode-title">Wybierz tryb {screen}</div>
+      <div className="mode-title">Wybierz tryb</div>
       <div className="mode-buttons">
         <Button
           onClick={() => {

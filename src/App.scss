@@ -4,7 +4,7 @@
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   header {
@@ -28,15 +28,14 @@
       justify-content: center;
       align-items: center;
       &-top {
-        font-size: 125px;
+        font-size: 75px;
       }
       &-bottom {
-        font-size: 90px;
+        font-size: 55px;
       }
     }
   }
   main {
-    font-size: 50px;
     background-color: blue;
     width: 100%;
     display: flex;
@@ -45,7 +44,8 @@
       height: 66%;
       .mode-title {
         width: 100%;
-        font-size: 50px;
+        font-size: 20px;
+        padding: 20px;
         text-transform: uppercase;
         text-align: center;
       }
@@ -87,8 +87,9 @@
           justify-content: center;
           align-items: center;
           button {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
+            font-weight: bold;
             background-color: yellow;
             font-size: 30px;
             text-transform: lowercase;
@@ -124,8 +125,9 @@
         justify-content: space-between;
         button {
           background-color: black;
-          padding: 30px;
-          margin: 10px;
+          padding: 20px;
+          margin: 5px;
+          flex-grow: 1;
           &.active {
             border: 2px solid red;
           }
