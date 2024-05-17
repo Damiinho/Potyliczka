@@ -3,11 +3,34 @@ import { AppContext } from "../../contexts/AppContext";
 import { Button } from "@mui/base";
 
 const ChooseTopic = () => {
-  const { topics, setTopics } = useContext(AppContext);
+  const { topics, setTopics, setScreen, setResult, setCurrentTime } =
+    useContext(AppContext);
+
+  const activeSentences = topics.reduce((acc, topic) => {
+    if (topic.active) {
+      const activeSentencesCount = topic.sentences.filter(
+        (sentence) => sentence.active
+      ).length;
+      return acc + activeSentencesCount;
+    }
+    return acc;
+  }, 0);
+  const allSentences = topics.reduce((acc, topic) => {
+    if (topic.active) {
+      const activeSentencesCount = topic.sentences.length;
+      return acc + activeSentencesCount;
+    }
+    return acc;
+  }, 0);
 
   return (
     <main className="topic">
-      <div className="topic-title">Wybierz temat</div>
+      <div className="topic-title">
+        <div>Wybierz temat</div>
+        <div>
+          haseł w wybranych kategoriach: {activeSentences}/{allSentences}
+        </div>
+      </div>
       <div className="topic-main">
         {topics.map((topic, index) => (
           <Button
@@ -25,7 +48,15 @@ const ChooseTopic = () => {
         ))}
       </div>
       <div className="topic-confirm">
-        <Button>start</Button>
+        <Button
+          onClick={() => {
+            setScreen("game");
+            setResult(0);
+            setCurrentTime(3);
+          }}
+        >
+          start
+        </Button>
       </div>
     </main>
   );

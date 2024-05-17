@@ -3,6 +3,7 @@ import { AppContext } from "../contexts/AppContext";
 import ChooseMode from "./Main/ChooseMode";
 import ChooseOptions from "./Main/ChooseOptions";
 import ChooseTopic from "./Main/ChooseTopic";
+import Game from "./Main/Game";
 
 const Main = () => {
   const { screen } = useContext(AppContext);
@@ -12,6 +13,8 @@ const Main = () => {
     <ChooseOptions />
   ) : screen === "chooseTopic" ? (
     <ChooseTopic />
+  ) : screen === "game" ? (
+    <Game />
   ) : null;
 };
 export default Main;
