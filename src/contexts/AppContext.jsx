@@ -7,6 +7,7 @@ export const AppProvider = ({ children }) => {
   const [screen, setScreen] = useState("chooseMode");
   const [mode, setMode] = useState("");
   const [speedTime, setSpeedTime] = useState(60);
+  const [effortTime, setEffortTime] = useState(10);
   const [topics, setTopics] = useState([
     {
       name: "ludzie",
@@ -27,6 +28,8 @@ export const AppProvider = ({ children }) => {
     setMode,
     speedTime,
     setSpeedTime,
+    effortTime,
+    setEffortTime,
     topics,
     setTopics,
     isStarted,

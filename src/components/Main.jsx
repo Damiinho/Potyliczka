@@ -1,97 +1,17 @@
 import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
-import { Button } from "@mui/material";
+import ChooseMode from "./Main/ChooseMode";
+import ChooseOptions from "./Main/ChooseOptions";
+import ChooseTopic from "./Main/ChooseTopic";
 
 const Main = () => {
-  const {
-    setMode,
-    mode,
-    screen,
-    setScreen,
-    speedTime,
-    setSpeedTime,
-    topics,
-    setTopics,
-  } = useContext(AppContext);
+  const { screen } = useContext(AppContext);
   return screen === null || screen === "chooseMode" ? (
-    <main className="mode">
-      <div className="mode-title">Wybierz tryb</div>
-      <div className="mode-buttons">
-        <Button
-          onClick={() => {
-            setMode("speed");
-            setScreen("chooseOptions");
-          }}
-        >
-          Szybkość
-        </Button>
-        <Button
-          onClick={() => {
-            setMode("effort");
-            setScreen("chooseOptions");
-          }}
-        >
-          Wytrwałość
-        </Button>
-      </div>
-    </main>
+    <ChooseMode />
   ) : screen === "chooseOptions" ? (
-    <main className="options">
-      {mode === "speed" ? (
-        <div className="options-speed">
-          <div className="options-speed__title">Ustaw czas</div>
-          <div className="options-speed__set">
-            <Button
-              onClick={() => {
-                setSpeedTime(speedTime - 10);
-              }}
-            >
-              -10s
-            </Button>
-            {speedTime}s
-            <Button
-              onClick={() => {
-                setSpeedTime(speedTime + 10);
-              }}
-            >
-              +10s
-            </Button>
-          </div>
-        </div>
-      ) : null}
-      <div className="options-next">
-        <Button
-          onClick={() => {
-            setScreen("chooseTopic");
-          }}
-        >
-          Wybierz temat
-        </Button>
-      </div>
-    </main>
+    <ChooseOptions />
   ) : screen === "chooseTopic" ? (
-    <main className="topic">
-      <div className="topic-title">Wybierz temat</div>
-      <div className="topic-main">
-        {topics.map((topic, index) => (
-          <Button
-            key={topic.name}
-            className={topic.active ? "active" : ""}
-            onClick={() => {
-              const newTopics = topics.map((t, i) =>
-                i === index ? { ...t, active: !t.active } : t
-              );
-              setTopics(newTopics);
-            }}
-          >
-            {topic.name}
-          </Button>
-        ))}
-      </div>
-      <div className="topic-confirm">
-        <Button>start</Button>
-      </div>
-    </main>
+    <ChooseTopic />
   ) : null;
 };
 export default Main;
