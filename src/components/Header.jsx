@@ -2,15 +2,8 @@ import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
 
 const Header = () => {
-  const {
-    setScreen,
-    setCurrentTopic,
-    setCurrentList,
-    setIsStarted,
-    alphaAngle,
-    betaAngle,
-    gammaAngle,
-  } = useContext(AppContext);
+  const { setScreen, setCurrentTopic, setCurrentList, setIsStarted } =
+    useContext(AppContext);
 
   return (
     <header
@@ -24,11 +17,7 @@ const Header = () => {
       <div className="logo"></div>
       <div className="text">
         <div className="text-top">Poty</div>
-        <div className="text-bottom">
-          {alphaAngle ? `${alphaAngle.toFixed(2)}°` : "liczka"}
-          {betaAngle ? `${betaAngle.toFixed(2)}°` : "liczka"}
-          {gammaAngle ? `${gammaAngle.toFixed(2)}°` : "liczka"}
-        </div>
+        <div className="text-bottom">Liczka</div>
       </div>
     </header>
   );

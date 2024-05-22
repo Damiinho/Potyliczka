@@ -58,52 +58,6 @@ const Display = () => {
   const [isGood, setIsGood] = useState(false);
   const [isSkip, setIsSkip] = useState(false);
 
-  useEffect(() => {
-    if (window.orientation === 0 || window.orientation === 180) {
-      if (betaAngle) {
-        if (!isGood) {
-          if (betaAngle > 125) {
-            setIsGood(true);
-          }
-        } else if (isGood) {
-          if (betaAngle < 110) {
-            setIsGood(false);
-          }
-        }
-        if (!isSkip) {
-          if (betaAngle < 50) {
-            setIsSkip(true);
-          }
-        } else if (isSkip) {
-          if (betaAngle > 60) {
-            setIsSkip(false);
-          }
-        }
-      }
-    } else {
-      if (gammaAngle) {
-        if (!isGood) {
-          if (gammaAngle > 0 && gammaAngle < 50) {
-            setIsGood(true);
-          }
-        } else if (isGood) {
-          if (gammaAngle > 80) {
-            setIsGood(false);
-          }
-        }
-        if (!isSkip) {
-          if (gammaAngle < 0 && gammaAngle > -45) {
-            setIsSkip(true);
-          }
-        } else if (isSkip) {
-          if (gammaAngle < -75) {
-            setIsSkip(false);
-          }
-        }
-      }
-    }
-  }, [isGood, isSkip, betaAngle, gammaAngle]);
-
   const handleGoodAnswer = useCallback(() => {
     currentList[currentList.length - 1].good = true;
 
@@ -147,6 +101,56 @@ const Display = () => {
     setScreen,
     updateTopicActiveStatus,
   ]);
+
+  useEffect(() => {
+    if (window.orientation === 0 || window.orientation === 180) {
+      if (betaAngle) {
+        if (!isGood) {
+          if (betaAngle > 125) {
+            setIsGood(true);
+          }
+        } else if (isGood) {
+          if (betaAngle < 110) {
+            setIsGood(false);
+            handleGoodAnswer();
+          }
+        }
+        if (!isSkip) {
+          if (betaAngle < 50) {
+            setIsSkip(true);
+          }
+        } else if (isSkip) {
+          if (betaAngle > 60) {
+            setIsSkip(false);
+            handleSkip();
+          }
+        }
+      }
+    } else {
+      if (gammaAngle) {
+        if (!isGood) {
+          if (gammaAngle > 0 && gammaAngle < 50) {
+            setIsGood(true);
+          }
+        } else if (isGood) {
+          if (gammaAngle > 80) {
+            setIsGood(false);
+            handleGoodAnswer();
+          }
+        }
+        if (!isSkip) {
+          if (gammaAngle < 0 && gammaAngle > -45) {
+            setIsSkip(true);
+          }
+        } else if (isSkip) {
+          if (gammaAngle < -75) {
+            setIsSkip(false);
+            handleSkip();
+          }
+        }
+      }
+    }
+  }, [isGood, isSkip, betaAngle, gammaAngle, handleGoodAnswer, handleSkip]);
 
   return (
     <main className={`game ${isGood ? "good" : isSkip ? "skip" : ""}`}>
