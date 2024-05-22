@@ -61,26 +61,26 @@ const Display = () => {
   useEffect(() => {
     if (window.orientation === 0 || window.orientation === 180) {
       // Pionowa orientacja ekranu
-      if (betaAngle) {
-        if (!isGood) {
-          if (betaAngle > 125) {
-            setIsGood(true);
-          }
-        } else if (isGood) {
-          if (betaAngle < 110) {
-            setIsGood(false);
-          }
-        }
-        if (!isSkip) {
-          if (betaAngle < 50) {
-            setIsSkip(true);
-          }
-        } else if (isGood) {
-          if (betaAngle > 60) {
-            setIsSkip(false);
-          }
-        }
-      }
+      // if (betaAngle) {
+      //   if (!isGood) {
+      //     if (betaAngle > 125) {
+      //       setIsGood(true);
+      //     }
+      //   } else if (isGood) {
+      //     if (betaAngle < 110) {
+      //       setIsGood(false);
+      //     }
+      //   }
+      //   if (!isSkip) {
+      //     if (betaAngle < 50) {
+      //       setIsSkip(true);
+      //     }
+      //   } else if (isGood) {
+      //     if (betaAngle > 60) {
+      //       setIsSkip(false);
+      //     }
+      //   }
+      // }
     } else {
       if (gammaAngle) {
         if (!isGood) {
