@@ -15,6 +15,7 @@ const Display = () => {
     currentList,
     setTopics,
     betaAngle,
+    gammaAngle,
   } = useContext(AppContext);
 
   const updateTopicActiveStatus = useCallback(
@@ -55,20 +56,54 @@ const Display = () => {
   ]);
 
   const [isGood, setIsGood] = useState(false);
+  const [isSkip, setIsSkip] = useState(false);
 
   useEffect(() => {
-    if (betaAngle) {
-      if (!isGood) {
-        if (betaAngle > 125) {
-          setIsGood(true);
+    if (window.orientation === 0 || window.orientation === 180) {
+      // Pionowa orientacja ekranu
+      if (betaAngle) {
+        if (!isGood) {
+          if (betaAngle > 125) {
+            setIsGood(true);
+          }
+        } else if (isGood) {
+          if (betaAngle < 110) {
+            setIsGood(false);
+          }
         }
-      } else if (isGood) {
-        if (betaAngle < 110) {
-          setIsGood(false);
+        if (!isSkip) {
+          if (betaAngle < 50) {
+            setIsSkip(true);
+          }
+        } else if (isGood) {
+          if (betaAngle > 60) {
+            setIsSkip(false);
+          }
+        }
+      }
+    } else {
+      if (gammaAngle) {
+        if (!isGood) {
+          if (gammaAngle > 0 && gammaAngle < 25) {
+            setIsGood(true);
+          }
+        } else if (isGood) {
+          if (gammaAngle > 45) {
+            setIsGood(false);
+          }
+        }
+        if (!isSkip) {
+          if (gammaAngle < 0 && gammaAngle > -25) {
+            setIsSkip(true);
+          }
+        } else if (isGood) {
+          if (gammaAngle > -45) {
+            setIsSkip(false);
+          }
         }
       }
     }
-  }, [isGood, betaAngle]);
+  }, [isGood, isSkip, betaAngle, gammaAngle]);
 
   const handleGoodAnswer = useCallback(() => {
     currentList[currentList.length - 1].good = true;
@@ -117,7 +152,8 @@ const Display = () => {
   return (
     <main className="game">
       <div>
-        Hasło: {currentTopic.name}; {isGood ? "Dobrze" : "czekam"}
+        Hasło: {currentTopic.name};{" "}
+        {isGood ? "Dobrze" : isSkip ? "pomijam" : "czekam"}
       </div>
       <Button onClick={handleGoodAnswer}>Dobrze</Button>
       <Button onClick={handleSkip}>Pomiń</Button>
