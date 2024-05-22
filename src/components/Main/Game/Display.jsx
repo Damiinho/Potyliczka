@@ -1,4 +1,4 @@
-import { useContext, useEffect, useCallback } from "react";
+import { useContext, useEffect, useCallback, useState } from "react";
 import { AppContext } from "../../../contexts/AppContext";
 import { Button } from "@mui/material";
 
@@ -14,6 +14,7 @@ const Display = () => {
     setCurrentList,
     currentList,
     setTopics,
+    betaAngle,
   } = useContext(AppContext);
 
   const updateTopicActiveStatus = useCallback(
@@ -52,6 +53,11 @@ const Display = () => {
     currentTopic.name,
     updateTopicActiveStatus,
   ]);
+  const [is125, setIs125] = useState(false);
+
+  if (betaAngle && betaAngle > 125) {
+    setIs125(true);
+  } else setIs125(false);
 
   const handleGoodAnswer = useCallback(() => {
     currentList[currentList.length - 1].good = true;
@@ -97,25 +103,12 @@ const Display = () => {
     updateTopicActiveStatus,
   ]);
 
-  useEffect(() => {
-    const handleDeviceOrientation = (event) => {
-      const { beta } = event; // beta - tilt front-to-back
-      if (beta > 45) {
-        handleGoodAnswer();
-      } else if (beta < -45) {
-        handleSkip();
-      }
-    };
-
-    window.addEventListener("deviceorientation", handleDeviceOrientation);
-    return () => {
-      window.removeEventListener("deviceorientation", handleDeviceOrientation);
-    };
-  }, [handleGoodAnswer, handleSkip]);
-
   return (
     <main className="game">
-      <div>hasło: {currentTopic.name}</div>
+      <div>
+        hasło: {currentTopic.name};{" "}
+        {is125 ? "ponad 125 stopni" : "poniżej 125 stopni"}
+      </div>
       <Button onClick={handleGoodAnswer}>Dobrze</Button>
       <Button onClick={handleSkip}>Pomiń</Button>
       <div>{currentTime}</div>
