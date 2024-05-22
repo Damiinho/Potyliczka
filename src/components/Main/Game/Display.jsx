@@ -74,7 +74,7 @@ const Display = () => {
           if (betaAngle < 50) {
             setIsSkip(true);
           }
-        } else if (isGood) {
+        } else if (isSkip) {
           if (betaAngle > 60) {
             setIsSkip(false);
           }
@@ -83,20 +83,20 @@ const Display = () => {
     } else {
       if (gammaAngle) {
         if (!isGood) {
-          if (gammaAngle > 0 && gammaAngle < 25) {
+          if (gammaAngle > 0 && gammaAngle < 50) {
             setIsGood(true);
           }
         } else if (isGood) {
-          if (gammaAngle > 45) {
+          if (gammaAngle > 80) {
             setIsGood(false);
           }
         }
         if (!isSkip) {
-          if (gammaAngle < 0 && gammaAngle > -25) {
+          if (gammaAngle < 0 && gammaAngle > -45) {
             setIsSkip(true);
           }
         } else if (isSkip) {
-          if (gammaAngle < -45) {
+          if (gammaAngle < -75) {
             setIsSkip(false);
           }
         }
@@ -149,14 +149,22 @@ const Display = () => {
   ]);
 
   return (
-    <main className="game">
-      <div>
-        Hasło: {currentTopic.name};{" "}
-        {isGood ? "Dobrze" : isSkip ? "pomijam" : "czekam"}
-      </div>
-      <Button onClick={handleGoodAnswer}>Dobrze</Button>
-      <Button onClick={handleSkip}>Pomiń</Button>
-      <div>{currentTime}</div>
+    <main className={`game ${isGood ? "good" : isSkip ? "skip" : ""}`}>
+      {isGood ? (
+        <div>GIT</div>
+      ) : isSkip ? (
+        <div>pomijam</div>
+      ) : (
+        <>
+          <div>
+            Hasło: {currentTopic.name};{" "}
+            {isGood ? "Dobrze" : isSkip ? "pomijam" : "czekam"}
+          </div>
+          <Button onClick={handleGoodAnswer}>Dobrze</Button>
+          <Button onClick={handleSkip}>Pomiń</Button>
+          <div>{currentTime}</div>
+        </>
+      )}
     </main>
   );
 };
