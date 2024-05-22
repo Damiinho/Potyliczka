@@ -7,7 +7,7 @@ const Header = () => {
     setCurrentTopic,
     setCurrentList,
     setIsStarted,
-    alfaAngle,
+    alphaAngle,
     betaAngle,
     gammaAngle,
   } = useContext(AppContext);
@@ -25,7 +25,7 @@ const Header = () => {
       <div className="text">
         <div className="text-top">Poty</div>
         <div className="text-bottom">
-          {alfaAngle ? `${alfaAngle.toFixed(2)}°` : "liczka"}
+          {alphaAngle ? `${alphaAngle.toFixed(2)}°` : "liczka"}
           {betaAngle ? `${betaAngle.toFixed(2)}°` : "liczka"}
           {gammaAngle ? `${gammaAngle.toFixed(2)}°` : "liczka"}
         </div>

@@ -51,7 +51,7 @@ export const AppProvider = ({ children }) => {
   const [currentTopic, setCurrentTopic] = useState({});
   const [currentList, setCurrentList] = useState([]);
 
-  const [alfaAngle, setAlfaAngle] = useState(0);
+  const [alphaAngle, setAlphaAngle] = useState(0);
   const [betaAngle, setBetaAngle] = useState(0);
   const [gammaAngle, setGammaAngle] = useState(0);
 
@@ -83,14 +83,14 @@ export const AppProvider = ({ children }) => {
     setCurrentTopic,
     currentList,
     setCurrentList,
-    alfaAngle,
+    alphaAngle,
     betaAngle,
     gammaAngle,
   };
 
   useEffect(() => {
     const handleOrientation = (event) => {
-      setAlfaAngle(event.alfa);
+      setAlphaAngle(event.alpha);
       setBetaAngle(event.beta);
       setGammaAngle(event.gamma);
     };
