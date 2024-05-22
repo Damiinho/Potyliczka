@@ -113,7 +113,6 @@ const Display = () => {
     };
 
     window.addEventListener("deviceorientation", handleDeviceOrientation);
-    setInfo("Added device orientation listener");
 
     // Check for permission
     if (typeof DeviceOrientationEvent.requestPermission === "function") {
