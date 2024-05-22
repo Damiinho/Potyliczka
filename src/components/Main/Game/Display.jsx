@@ -1,4 +1,4 @@
-import { useContext, useEffect, useCallback } from "react";
+import { useContext, useEffect, useCallback, useState } from "react";
 import { AppContext } from "../../../contexts/AppContext";
 import { Button } from "@mui/material";
 
@@ -15,6 +15,8 @@ const Display = () => {
     currentList,
     setTopics,
   } = useContext(AppContext);
+
+  const [info, setInfo] = useState("");
 
   const updateTopicActiveStatus = useCallback(
     (name, active) => {
@@ -100,24 +102,44 @@ const Display = () => {
   useEffect(() => {
     const handleDeviceOrientation = (event) => {
       const { beta } = event; // beta - tilt front-to-back
+      setInfo(`Device orientation changed: beta=${beta}`);
       if (beta > 45) {
+        setInfo("Detected tilt forward");
         handleGoodAnswer();
       } else if (beta < -45) {
+        setInfo("Detected tilt backward");
         handleSkip();
       }
     };
 
     window.addEventListener("deviceorientation", handleDeviceOrientation);
+    setInfo("Added device orientation listener");
+
+    // Check for permission
+    if (typeof DeviceOrientationEvent.requestPermission === "function") {
+      DeviceOrientationEvent.requestPermission()
+        .then((response) => {
+          if (response === "granted") {
+            setInfo("Permission granted");
+          } else {
+            setInfo("Permission denied");
+          }
+        })
+        .catch(setInfo("błąd"));
+    }
+
     return () => {
       window.removeEventListener("deviceorientation", handleDeviceOrientation);
+      setInfo("Removed device orientation listener");
     };
   }, [handleGoodAnswer, handleSkip]);
 
   return (
     <main className="game">
       <div>hasło: {currentTopic.name}</div>
-      <Button onClick={() => handleGoodAnswer()}>Dobrze</Button>
-      <Button onClick={() => handleSkip()}>Pomiń</Button>
+      <div>{info}</div>
+      <Button onClick={handleGoodAnswer}>Dobrze</Button>
+      <Button onClick={handleSkip}>Pomiń</Button>
       <div>{currentTime}</div>
     </main>
   );
