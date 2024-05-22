@@ -87,6 +87,37 @@ export const AppProvider = ({ children }) => {
       } else if (element.mozRequestFullScreen) {
         element.mozRequestFullScreen();
       }
+    } else if (!action) {
+      if (
+        !(
+          document.fullscreenElement ||
+          document.webkitFullscreenElement ||
+          document.mozFullScreenElement
+        )
+      ) {
+        // Wejdź w tryb pełnoekranowy
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        }
+      }
+    }
+    if (
+      document.fullscreenElement ||
+      document.webkitFullscreenElement ||
+      document.mozFullScreenElement
+    ) {
+      // Wejdź w tryb pełnoekranowy
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      }
     }
   };
 
