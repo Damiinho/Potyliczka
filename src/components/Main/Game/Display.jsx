@@ -129,7 +129,6 @@ const Display = () => {
 
     return () => {
       window.removeEventListener("deviceorientation", handleDeviceOrientation);
-      setInfo("Removed device orientation listener");
     };
   }, [handleGoodAnswer, handleSkip]);
 
