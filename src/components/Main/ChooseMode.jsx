@@ -3,9 +3,16 @@ import { useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
 
 const ChooseMode = () => {
-  const { setMode, setScreen } = useContext(AppContext);
+  const { setMode, setScreen, toggleFullscreen } = useContext(AppContext);
   return (
     <main className="mode">
+      <Button
+        variant="contained"
+        className="fullscreen"
+        onClick={() => toggleFullscreen()}
+      >
+        pełny ekran
+      </Button>
       <div className="mode-title">Wybierz tryb</div>
       <div className="mode-buttons">
         <Button
