@@ -51,6 +51,10 @@ export const AppProvider = ({ children }) => {
   const [currentTopic, setCurrentTopic] = useState({});
   const [currentList, setCurrentList] = useState([]);
 
+  const [alfaAngle, setAlfaAngle] = useState(0);
+  const [betaAngle, setBetaAngle] = useState(0);
+  const [gammaAngle, setGammaAngle] = useState(0);
+
   const providerValue = {
     windowWidth,
     setWindowWidth,
@@ -79,7 +83,24 @@ export const AppProvider = ({ children }) => {
     setCurrentTopic,
     currentList,
     setCurrentList,
+    alfaAngle,
+    betaAngle,
+    gammaAngle,
   };
+
+  useEffect(() => {
+    const handleOrientation = (event) => {
+      setAlfaAngle(event.alfa);
+      setBetaAngle(event.beta);
+      setGammaAngle(event.gamma);
+    };
+
+    window.addEventListener("deviceorientation", handleOrientation);
+
+    return () => {
+      window.removeEventListener("deviceorientation", handleOrientation);
+    };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
