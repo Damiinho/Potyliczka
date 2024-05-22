@@ -2,11 +2,15 @@ import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
 
 const Header = () => {
-  const { setScreen } = useContext(AppContext);
+  const { setScreen, setCurrentTopic, setCurrentList, setIsStarted } =
+    useContext(AppContext);
   return (
     <header
       onClick={() => {
         setScreen("chooseMode");
+        setCurrentTopic({});
+        setCurrentList([]);
+        setIsStarted(false);
       }}
     >
       <div className="logo"></div>

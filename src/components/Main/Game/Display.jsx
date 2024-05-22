@@ -53,41 +53,40 @@ const Display = () => {
     updateTopicActiveStatus,
   ]);
 
+  const hansleGoodAnswer = () => {
+    currentList[currentList.length - 1].good = true;
+
+    if (activeFilteredTopics.length === 0) {
+      setScreen("theend");
+    } else {
+      const newTopic =
+        activeFilteredTopics[
+          Math.floor(Math.random() * activeFilteredTopics.length)
+        ];
+      setCurrentTopic(newTopic);
+      updateTopicActiveStatus(newTopic.name, false);
+      setCurrentList([...currentList, { ...newTopic, good: false }]);
+    }
+  };
+  const handleSkip = () => {
+    if (activeFilteredTopics.length === 0) {
+      setScreen("theend");
+    } else {
+      const newTopic =
+        activeFilteredTopics[
+          Math.floor(Math.random() * activeFilteredTopics.length)
+        ];
+      setCurrentTopic(newTopic);
+      updateTopicActiveStatus(newTopic.name, false);
+      setCurrentList([...currentList, { ...newTopic, good: false }]);
+    }
+  };
+
   return (
     <main className="game">
       <div>hasło: {currentTopic.name}</div>
-      <Button
-        onClick={() => {
-          const newTopic =
-            activeFilteredTopics[
-              Math.floor(Math.random() * activeFilteredTopics.length)
-            ];
-          setCurrentTopic(newTopic);
-          updateTopicActiveStatus(newTopic.name, false);
-          setCurrentList([...currentList, { ...newTopic, good: true }]);
-          if (activeFilteredTopics.length === 1) {
-            setScreen("theend");
-          }
-        }}
-      >
-        Dobrze
-      </Button>
-      <Button
-        onClick={() => {
-          const newTopic =
-            activeFilteredTopics[
-              Math.floor(Math.random() * activeFilteredTopics.length)
-            ];
-          setCurrentTopic(newTopic);
-          updateTopicActiveStatus(newTopic.name, false);
-          setCurrentList([...currentList, { ...newTopic, good: false }]);
-          if (activeFilteredTopics.length === 1) {
-            setScreen("theend");
-          }
-        }}
-      >
-        Pomiń
-      </Button>
+      <Button onClick={() => hansleGoodAnswer()}>Dobrze</Button>
+      <Button onClick={() => handleSkip()}>Pomiń</Button>
       <div>{currentTime}</div>
     </main>
   );
