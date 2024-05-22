@@ -54,15 +54,21 @@ const Display = () => {
     updateTopicActiveStatus,
   ]);
 
-  const [isOver125, setIsOver125] = useState(false);
+  const [isGood, setIsGood] = useState(false);
 
   useEffect(() => {
-    if (betaAngle && betaAngle > 125) {
-      setIsOver125(true);
-    } else {
-      setIsOver125(false);
+    if (betaAngle) {
+      if (!isGood) {
+        if (betaAngle > 125) {
+          setIsGood(true);
+        }
+      } else if (isGood) {
+        if (betaAngle < 110) {
+          setIsGood(false);
+        }
+      }
     }
-  }, [betaAngle]);
+  }, [isGood, betaAngle]);
 
   const handleGoodAnswer = useCallback(() => {
     currentList[currentList.length - 1].good = true;
@@ -111,8 +117,7 @@ const Display = () => {
   return (
     <main className="game">
       <div>
-        Hasło: {currentTopic.name};{" "}
-        {isOver125 ? "Ponad 125 stopni" : "Poniżej lub równo 125 stopni"}
+        Hasło: {currentTopic.name}; {isGood ? "Dobrze" : "czekam"}
       </div>
       <Button onClick={handleGoodAnswer}>Dobrze</Button>
       <Button onClick={handleSkip}>Pomiń</Button>
