@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
+import LogoIMG from "../img/Occipital_bone.gif";
 
 const Header = () => {
   const { setScreen, setCurrentTopic, setCurrentList, setIsStarted } =
@@ -14,7 +15,9 @@ const Header = () => {
         setIsStarted(false);
       }}
     >
-      <div className="logo"></div>
+      <div className="logo">
+        <img src={LogoIMG} alt="logo" />
+      </div>
       <div className="text">
         <div className="text-top">Poty</div>
         <div className="text-bottom">Liczka</div>
