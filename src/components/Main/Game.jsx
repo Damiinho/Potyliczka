@@ -1,29 +1,12 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
+import Starter from "./Game/Starter";
+import Display from "./Game/Display";
 
 const Game = () => {
-  const { currentTime, setCurrentTime } = useContext(AppContext);
+  const { isStarted } = useContext(AppContext);
 
-  useEffect(() => {
-    if (currentTime <= 0) {
-      setCurrentTime(10);
-      return;
-    }
-
-    const timer = setInterval(() => {
-      setCurrentTime((prevTime) => {
-        if (prevTime <= 0) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prevTime - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [currentTime, setCurrentTime]);
-
-  return <main className="game">{currentTime}</main>;
+  return isStarted ? <Display /> : <Starter />;
 };
 
 export default Game;

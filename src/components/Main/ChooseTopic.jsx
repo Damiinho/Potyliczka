@@ -1,49 +1,55 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
 import { Button } from "@mui/base";
 
 const ChooseTopic = () => {
-  const { topics, setTopics, setScreen, setResult, setCurrentTime } =
-    useContext(AppContext);
+  const {
+    setScreen,
+    setResult,
+    setCurrentTime,
+    category,
+    setCategory,
+    activeFilteredTopics,
+    filteredTopics,
+    setCurrentTopic,
+    setTopics,
+    setCurrentList,
+    currentList,
+  } = useContext(AppContext);
 
-  const activeSentences = topics.reduce((acc, topic) => {
-    if (topic.active) {
-      const activeSentencesCount = topic.sentences.filter(
-        (sentence) => sentence.active
-      ).length;
-      return acc + activeSentencesCount;
-    }
-    return acc;
-  }, 0);
-  const allSentences = topics.reduce((acc, topic) => {
-    if (topic.active) {
-      const activeSentencesCount = topic.sentences.length;
-      return acc + activeSentencesCount;
-    }
-    return acc;
-  }, 0);
+  const updateTopicActiveStatus = useCallback(
+    (name, active) => {
+      setTopics((prevTopics) =>
+        prevTopics.map((topic) =>
+          topic.name === name ? { ...topic, active } : topic
+        )
+      );
+    },
+    [setTopics]
+  );
 
   return (
     <main className="topic">
       <div className="topic-title">
         <div>Wybierz temat</div>
         <div>
-          haseł w wybranych kategoriach: {activeSentences}/{allSentences}
+          haseł w wybranych kategoriach: {activeFilteredTopics.length}/
+          {filteredTopics.length}
         </div>
       </div>
       <div className="topic-main">
-        {topics.map((topic, index) => (
+        {category.map((cat, index) => (
           <Button
-            key={topic.name}
-            className={topic.active ? "active" : ""}
+            key={cat.name}
+            className={cat.active ? "active" : ""}
             onClick={() => {
-              const newTopics = topics.map((t, i) =>
+              const newCategory = category.map((t, i) =>
                 i === index ? { ...t, active: !t.active } : t
               );
-              setTopics(newTopics);
+              setCategory(newCategory);
             }}
           >
-            {topic.name}
+            {cat.name}
           </Button>
         ))}
       </div>
@@ -53,6 +59,13 @@ const ChooseTopic = () => {
             setScreen("game");
             setResult(0);
             setCurrentTime(3);
+            const newTopic =
+              activeFilteredTopics[
+                Math.floor(Math.random() * activeFilteredTopics.length)
+              ];
+            setCurrentTopic(newTopic);
+            updateTopicActiveStatus(newTopic.name, false);
+            setCurrentList([...currentList, { ...newTopic, good: false }]);
           }}
         >
           start
