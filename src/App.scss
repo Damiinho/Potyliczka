@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Poetsen+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Micro+5+Charted&family=Rubik+Broken+Fax&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap");
+
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -6,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  background-color: #000;
+  background-color: #f0f7f4;
   header {
     font-size: 50px;
     width: 100%;
@@ -14,31 +18,43 @@
     cursor: pointer;
 
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     .logo {
-      width: 35%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       img {
-        width: 100%;
-        max-height: 100%;
+        max-height: 90%;
+        max-width: 90%;
+
         object-fit: contain;
       }
     }
     .text {
-      width: 75%;
       height: 100%;
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      color: #232c33;
+      img {
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: contain;
+      }
       &-top {
-        font-size: 75px;
+        font-size: 100px;
+        font-family: "Micro 5 Charted", sans-serif;
+        color: #3c493f;
       }
       &-bottom {
         font-size: 55px;
+        font-family: "Jersey 25 Charted", sans-serif;
+        color: #3c493f;
       }
     }
   }
@@ -56,10 +72,13 @@
       height: 66%;
       .mode-title {
         width: 100%;
-        font-size: 20px;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 3px;
         padding: 20px;
         text-transform: uppercase;
         text-align: center;
+        font-family: "Ubuntu Sans Mono", monospace;
       }
       .mode-buttons {
         height: 100%;
@@ -70,9 +89,13 @@
         padding: 20px;
         gap: 20px;
         button {
-          height: 50%;
+          // height: 50%;
+          padding: 30px;
           width: 100%;
-          background-color: palegreen;
+          max-width: 300px;
+          background-color: #3c493f;
+          display: flex;
+          justify-content: space-between;
         }
       }
     }
