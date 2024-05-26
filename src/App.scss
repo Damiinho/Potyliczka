@@ -20,9 +20,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     .logo {
       height: 100%;
+      width: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,6 +35,7 @@
     }
     .text {
       height: 100%;
+      width: 50%;
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
@@ -57,6 +58,9 @@
         color: #3c493f;
       }
     }
+  }
+  header.inactive {
+    display: none;
   }
   main {
     width: 100%;
@@ -84,6 +88,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 20px;
@@ -93,7 +98,8 @@
           padding: 30px;
           width: 100%;
           max-width: 300px;
-          background-color: #3c493f;
+          background-color: #7e8d85;
+          color: #f0f7f4;
           display: flex;
           justify-content: space-between;
         }
@@ -101,6 +107,10 @@
     }
     &.options {
       height: 66%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
       .options-speed,
       .options-effort {
         height: 50%;
@@ -108,10 +118,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: blueviolet;
+        color: #3c493f;
+        font-family: "Ubuntu Sans Mono", monospace;
         &__title {
           font-size: 50px;
           text-transform: uppercase;
+          text-align: center;
         }
         &__set {
           gap: 20px;
@@ -122,35 +134,47 @@
           justify-content: center;
           align-items: center;
           button {
-            width: 80px;
-            height: 80px;
             font-weight: bold;
-            background-color: yellow;
-            font-size: 30px;
+            font-size: 20px;
             text-transform: lowercase;
+            padding: 5px 0;
           }
         }
       }
       .options-next {
         margin: 20px;
-        height: 50%;
+        height: 20%;
         button {
           width: 100%;
           height: 100%;
-          background-color: yellowgreen;
+          background-color: #7e8d85;
+          font-family: "Ubuntu Sans Mono", monospace;
+          font-size: 30px;
         }
       }
     }
     &.topic {
-      height: 60%;
+      font-family: "Ubuntu Sans Mono", monospace;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 20px;
       .topic-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
-        font-size: 30px;
+        gap: 20px;
         text-transform: uppercase;
+        &__top {
+          font-size: 30px;
+        }
+        &__bottom {
+          width: 200px;
+          font-size: 15px;
+        }
       }
       .topic-main {
         display: flex;
@@ -158,12 +182,14 @@
         flex-wrap: wrap;
         justify-content: space-between;
         button {
-          background-color: black;
+          background-color: #b3bfb8;
+          color: #3c493f;
+          font-family: "Ubuntu Sans Mono", monospace;
           padding: 20px;
           margin: 5px;
           flex-grow: 1;
           &.active {
-            border: 2px solid red;
+            border: 1px solid #3c493f;
           }
         }
       }
@@ -173,7 +199,9 @@
         justify-content: center;
         align-items: center;
         button {
-          background-color: grey;
+          font-family: "Ubuntu Sans Mono", monospace;
+          font-size: 25px;
+          background-color: #7e8d85;
           width: 100%;
           height: 100%;
         }
@@ -194,6 +222,46 @@
     }
     &.skip {
       background-color: orange;
+    }
+  }
+
+  .game.starter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: #7e8d85;
+    font-family: "Ubuntu Sans Mono", monospace;
+    height: 100%;
+  }
+  .game {
+    font-family: "Ubuntu Sans Mono", monospace;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-topic {
+      width: 100%;
+      text-align: center;
+      &__name {
+        padding: 0 10px;
+        color: #3c493f;
+        font-size: 50px;
+        font-weight: 700;
+      }
+    }
+
+    &-buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      button {
+        flex-grow: 1;
+        width: 100%;
+        margin: 0 5px 5px;
+      }
     }
   }
 }

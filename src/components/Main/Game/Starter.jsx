@@ -36,7 +36,7 @@ const Starter = () => {
     return () => clearInterval(timer);
   }, [currentTime, setCurrentTime, setIsStarted, mode, speedTime, effortTime]);
 
-  return <main className="game">{currentTime}</main>;
+  return <main className="game starter">{currentTime}</main>;
 };
 
 export default Starter;

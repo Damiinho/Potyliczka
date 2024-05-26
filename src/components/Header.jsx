@@ -3,7 +3,7 @@ import { AppContext } from "../contexts/AppContext";
 import LogoStand from "../img/logo_lobe.png";
 
 const Header = () => {
-  const { setScreen, setCurrentTopic, setCurrentList, setIsStarted } =
+  const { screen, setScreen, setCurrentTopic, setCurrentList, setIsStarted } =
     useContext(AppContext);
 
   return (
@@ -14,6 +14,7 @@ const Header = () => {
         setCurrentList([]);
         setIsStarted(false);
       }}
+      className={`${screen === "game" ? "inactive" : ""}`}
     >
       <div className="logo">
         <img src={LogoStand} alt="logo" />

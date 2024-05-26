@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
 import SpeedIcon from "@mui/icons-material/Speed";
 import PoolIcon from "@mui/icons-material/Pool";
+import HourglassTopIcon from "@mui/icons-material/HourglassTop";
 
 const ChooseMode = () => {
   const { setMode, setScreen, toggleFullscreen } = useContext(AppContext);
@@ -25,7 +26,8 @@ const ChooseMode = () => {
             setScreen("chooseOptions");
           }}
         >
-          <SpeedIcon /> <p>Szybkość</p>
+          <p>Szybkość</p>
+          <SpeedIcon />
         </Button>
         <Button
           variant="contained"
@@ -35,7 +37,21 @@ const ChooseMode = () => {
             setScreen("chooseOptions");
           }}
         >
-          <PoolIcon /> <p>Wytrwałość</p>
+          <p>Wytrwałość</p>
+          <PoolIcon />
+        </Button>
+        <Button
+          variant="contained"
+          color="warning"
+          onClick={() => {
+            setMode("effort");
+            setScreen("chooseOptions");
+          }}
+          disabled
+          style={{ backgroundColor: "grey", color: "#B3BFB8" }}
+        >
+          <p>inne</p>
+          <HourglassTopIcon />
         </Button>
       </div>
     </main>

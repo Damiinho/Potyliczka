@@ -155,18 +155,33 @@ const Display = () => {
   return (
     <main className={`game ${isGood ? "good" : isSkip ? "skip" : ""}`}>
       {isGood ? (
-        <div>GIT</div>
+        <div className="game-result">GIT</div>
       ) : isSkip ? (
-        <div>pomijam</div>
+        <div className="game-result">pomijam</div>
       ) : (
         <>
-          <div>
-            Hasło: {currentTopic.name};{" "}
-            {isGood ? "Dobrze" : isSkip ? "pomijam" : "czekam"}
+          <div className="game-time">{currentTime}</div>
+          <div className="game-topic">
+            <div className="game-topic__name">{currentTopic.name}</div>
+            <div className="game-topic__category">
+              Kategoria:{" "}
+              {currentTopic.category.map((item) => {
+                return <span key={item}>{item}</span>;
+              })}
+            </div>
           </div>
-          <Button onClick={handleGoodAnswer}>Dobrze</Button>
-          <Button onClick={handleSkip}>Pomiń</Button>
-          <div>{currentTime}</div>
+          <div className="game-buttons">
+            <Button
+              variant="contained"
+              color="success"
+              onClick={handleGoodAnswer}
+            >
+              Dobrze
+            </Button>
+            <Button variant="contained" color="error" onClick={handleSkip}>
+              Pomiń
+            </Button>
+          </div>
         </>
       )}
     </main>

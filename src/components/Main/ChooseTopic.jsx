@@ -1,6 +1,6 @@
 import { useCallback, useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
-import { Button } from "@mui/base";
+import { Button } from "@mui/material";
 
 const ChooseTopic = () => {
   const {
@@ -31,8 +31,8 @@ const ChooseTopic = () => {
   return (
     <main className="topic">
       <div className="topic-title">
-        <div>Wybierz temat</div>
-        <div>
+        <div className="topic-title__top">Wybierz temat</div>
+        <div className="topic-title__bottom">
           haseł w wybranych kategoriach: {activeFilteredTopics.length}/
           {filteredTopics.length}
         </div>
@@ -41,6 +41,7 @@ const ChooseTopic = () => {
         {category.map((cat, index) => (
           <Button
             key={cat.name}
+            variant="contained"
             className={cat.active ? "active" : ""}
             onClick={() => {
               const newCategory = category.map((t, i) =>
@@ -55,6 +56,7 @@ const ChooseTopic = () => {
       </div>
       <div className="topic-confirm">
         <Button
+          variant="contained"
           onClick={() => {
             setScreen("game");
             setResult(0);
