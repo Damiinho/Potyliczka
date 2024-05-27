@@ -1,6 +1,7 @@
 import { useCallback, useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
 import { Button } from "@mui/material";
+import ClearIcon from "@mui/icons-material/Clear";
 
 const ChooseTopic = () => {
   const {
@@ -12,6 +13,7 @@ const ChooseTopic = () => {
     activeFilteredTopics,
     filteredTopics,
     setCurrentTopic,
+    topics,
     setTopics,
     setCurrentList,
     currentList,
@@ -28,13 +30,29 @@ const ChooseTopic = () => {
     [setTopics]
   );
 
+  const handleClear = () => {
+    const newTopics = topics.map((topic) => ({
+      ...topic,
+      active: true,
+    }));
+    setTopics(newTopics);
+  };
+
   return (
     <main className="topic">
       <div className="topic-title">
         <div className="topic-title__top">Wybierz temat</div>
         <div className="topic-title__bottom">
-          haseł w wybranych kategoriach: {activeFilteredTopics.length}/
-          {filteredTopics.length}
+          <p>
+            haseł w wybranych kategoriach: {activeFilteredTopics.length}/
+            {filteredTopics.length}
+          </p>
+          {activeFilteredTopics.length / filteredTopics.length ===
+          1 ? null : filteredTopics.length === 0 ? null : (
+            <Button onClick={handleClear} variant="contained">
+              <ClearIcon />
+            </Button>
+          )}
         </div>
       </div>
       <div className="topic-main">
