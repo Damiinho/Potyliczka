@@ -58,16 +58,18 @@ const ChooseTopic = () => {
         <Button
           variant="contained"
           onClick={() => {
-            setScreen("game");
-            setResult(0);
-            setCurrentTime(3);
-            const newTopic =
-              activeFilteredTopics[
-                Math.floor(Math.random() * activeFilteredTopics.length)
-              ];
-            setCurrentTopic(newTopic);
-            updateTopicActiveStatus(newTopic.name, false);
-            setCurrentList([...currentList, { ...newTopic, good: false }]);
+            if (!(activeFilteredTopics.length === 0)) {
+              setScreen("game");
+              setResult(0);
+              setCurrentTime(3);
+              const newTopic =
+                activeFilteredTopics[
+                  Math.floor(Math.random() * activeFilteredTopics.length)
+                ];
+              setCurrentTopic(newTopic);
+              updateTopicActiveStatus(newTopic.name, false);
+              setCurrentList([...currentList, { ...newTopic, good: false }]);
+            } else return null;
           }}
         >
           start
