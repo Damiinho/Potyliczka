@@ -16,6 +16,7 @@ const Display = () => {
     setTopics,
     betaAngle,
     gammaAngle,
+    speedTime,
   } = useContext(AppContext);
 
   const updateTopicActiveStatus = useCallback(
@@ -160,7 +161,13 @@ const Display = () => {
         <div className="game-result">pomijam</div>
       ) : (
         <>
-          <div className="game-time">{currentTime}</div>
+          <div className="game-time">
+            <div
+              className="game-time__inside"
+              style={{ width: `${(currentTime / speedTime) * 100}%` }}
+            ></div>
+            <p>{currentTime.toFixed(1)}s</p>
+          </div>
           <div className="game-topic">
             <div className="game-topic__name">{currentTopic.name}</div>
             <div className="game-topic__category">

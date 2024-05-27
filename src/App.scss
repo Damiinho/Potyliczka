@@ -242,6 +242,25 @@
     justify-content: space-between;
     align-items: center;
 
+    &-time {
+      position: relative;
+      height: 50px;
+      width: 100%;
+      &__inside {
+        background-color: #3c493f;
+        height: 100%;
+      }
+      p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: 25px;
+        color: #7e8d85;
+      }
+    }
+
     &-topic {
       width: 100%;
       text-align: center;
