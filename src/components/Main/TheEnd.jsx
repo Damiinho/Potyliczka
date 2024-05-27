@@ -5,13 +5,13 @@ const TheEnd = () => {
   const { currentList } = useContext(AppContext);
 
   return (
-    <main>
-      {currentList.map((item) => (
+    <main className="theend">
+      <div className="theend-title">Lista haseł</div>
+      {currentList.map((item, i) => (
         <div key={item.name} className={`${item.good && "good"}`}>
-          {item.name}
+          {i + 1}. {item.name}
         </div>
       ))}
-      koniec
     </main>
   );
 };
