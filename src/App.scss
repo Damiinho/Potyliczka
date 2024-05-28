@@ -67,13 +67,27 @@
     display: flex;
     flex-direction: column;
     button.fullscreen {
-      position: absolute;
-      top: 0;
-      right: 0;
+      // position: absolute;
+      display: flex;
+      flex-direction: column;
+      font-size: 15px;
+      // bottom: 1%;
+      // right: 1%;
+      width: 250px;
+      color: #3c493f;
+      border-color: #3c493f;
+      font-family: "Ubuntu Sans Mono", monospace;
+      background-color: none;
+      &.none {
+        display: none;
+      }
+      p:nth-of-type(2) {
+        font-size: 10px;
+      }
     }
 
     &.mode {
-      height: 66%;
+      height: 100%;
       .mode-title {
         width: 100%;
         font-size: 30px;
@@ -98,10 +112,12 @@
           padding: 30px;
           width: 100%;
           max-width: 300px;
-          background-color: #7e8d85;
-          color: #f0f7f4;
           display: flex;
           justify-content: space-between;
+          &.mode {
+            background-color: #7e8d85;
+            color: #f0f7f4;
+          }
         }
       }
     }

@@ -4,21 +4,25 @@ import { AppContext } from "../../contexts/AppContext";
 import SpeedIcon from "@mui/icons-material/Speed";
 import PoolIcon from "@mui/icons-material/Pool";
 import HourglassTopIcon from "@mui/icons-material/HourglassTop";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
 
 const ChooseMode = () => {
   const { setMode, setScreen, toggleFullscreen } = useContext(AppContext);
   return (
     <main className="mode">
-      <Button
-        variant="contained"
-        className="fullscreen"
-        onClick={() => toggleFullscreen()}
-      >
-        pełny ekran
-      </Button>
       {/* <div className="mode-title">Wybierz tryb</div> */}
       <div className="mode-buttons">
         <Button
+          variant="outlined"
+          className={`fullscreen        `}
+          onClick={() => toggleFullscreen()}
+        >
+          <p>Włącz pełny ekran</p>
+          <p>(tak będzie lepiej, polecam)</p>
+          <FullscreenIcon style={{ fontSize: 50 }} />
+        </Button>
+        <Button
+          className={`mode`}
           variant="contained"
           color="secondary"
           onClick={() => {
@@ -30,6 +34,7 @@ const ChooseMode = () => {
           <SpeedIcon />
         </Button>
         <Button
+          className={`mode`}
           variant="contained"
           color="warning"
           onClick={() => {
@@ -41,6 +46,7 @@ const ChooseMode = () => {
           <PoolIcon />
         </Button>
         <Button
+          className={`mode`}
           variant="contained"
           color="warning"
           onClick={() => {
