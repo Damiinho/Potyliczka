@@ -1,6 +1,6 @@
 import { useCallback, useContext } from "react";
 import { AppContext } from "../../contexts/AppContext";
-import { Button } from "@mui/material";
+import { Button, ButtonGroup } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
 
 const ChooseTopic = () => {
@@ -37,11 +37,28 @@ const ChooseTopic = () => {
     }));
     setTopics(newTopics);
   };
+  const handleAll = (boolean) => {
+    const newCategory = category.map((cat) => ({
+      ...cat,
+      active: boolean,
+    }));
+    setCategory(newCategory);
+  };
 
   return (
     <main className="topic">
       <div className="topic-title">
-        <div className="topic-title__top">Wybierz temat</div>
+        <div className="topic-title__top">
+          <p>Wybierz temat</p>
+          <ButtonGroup aria-label="Basic button group">
+            <Button onClick={() => handleAll(true)} variant="outlined">
+              zaznacz wszystkie
+            </Button>
+            <Button onClick={() => handleAll(false)} variant="outlined">
+              <ClearIcon />
+            </Button>
+          </ButtonGroup>
+        </div>
         <div className="topic-title__bottom">
           <p>
             haseł w wybranych kategoriach: {activeFilteredTopics.length}/
