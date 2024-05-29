@@ -17,6 +17,8 @@ const Display = () => {
     betaAngle,
     gammaAngle,
     speedTime,
+    effortTime,
+    mode,
   } = useContext(AppContext);
 
   const updateTopicActiveStatus = useCallback(
@@ -72,8 +74,14 @@ const Display = () => {
       setCurrentTopic(newTopic);
       updateTopicActiveStatus(newTopic.name, false);
       setCurrentList([...currentList, { ...newTopic, good: false }]);
+      if (mode === "effort") {
+        setCurrentTime(effortTime);
+      }
     }
   }, [
+    mode,
+    setCurrentTime,
+    effortTime,
     activeFilteredTopics,
     currentList,
     setCurrentList,
@@ -164,7 +172,17 @@ const Display = () => {
           <div className="game-time">
             <div
               className="game-time__inside"
-              style={{ width: `${(currentTime / speedTime) * 100}%` }}
+              style={{
+                width: `${
+                  (currentTime /
+                    (mode === "speed"
+                      ? speedTime
+                      : mode === "effort"
+                      ? effortTime
+                      : null)) *
+                  100
+                }%`,
+              }}
             ></div>
             <p>{currentTime.toFixed(1)}s</p>
           </div>
@@ -185,9 +203,11 @@ const Display = () => {
             >
               Dobrze
             </Button>
-            <Button variant="contained" color="error" onClick={handleSkip}>
-              Pomiń
-            </Button>
+            {mode === "speed" && (
+              <Button variant="contained" color="error" onClick={handleSkip}>
+                Pomiń
+              </Button>
+            )}
           </div>
         </>
       )}
