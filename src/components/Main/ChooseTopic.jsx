@@ -51,11 +51,22 @@ const ChooseTopic = () => {
         <div className="topic-title__top">
           <p>Wybierz temat</p>
           <ButtonGroup aria-label="Basic button group">
-            <Button onClick={() => handleAll(true)} variant="outlined">
-              zaznacz wszystkie
+            <Button
+              onClick={() => handleAll(true)}
+              variant="contained"
+              disabled={category.every((i) => i.active)}
+              className={`${category.every((i) => i.active) ? "disabled" : ""}`}
+              sx={{ backgroundColor: "#3C493F" }}
+            >
+              wszystkie
             </Button>
-            <Button onClick={() => handleAll(false)} variant="outlined">
-              <ClearIcon />
+            <Button
+              onClick={() => handleAll(false)}
+              variant="contained"
+              disabled={category.every((i) => !i.active)}
+              sx={{ backgroundColor: "#ae7171" }}
+            >
+              Odznacz
             </Button>
           </ButtonGroup>
         </div>
