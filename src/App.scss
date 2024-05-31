@@ -12,6 +12,10 @@
   overflow: hidden;
   background-color: #f0f7f4;
 
+  .howtoplay {
+    font-family: "Ubuntu Sans Mono", monospace;
+  }
+
   header {
     font-size: 50px;
     width: 100%;
@@ -86,25 +90,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    button.fullscreen {
-      // position: absolute;
-      display: flex;
-      flex-direction: column;
-      font-size: 15px;
-      // bottom: 1%;
-      // right: 1%;
-      width: 250px;
-      color: #3c493f;
-      border-color: #3c493f;
-      font-family: "Ubuntu Sans Mono", monospace;
-      background-color: none;
-      &.none {
-        display: none;
-      }
-      p:nth-of-type(2) {
-        font-size: 10px;
-      }
-    }
 
     &.mode {
       height: 100%;
@@ -138,12 +123,43 @@
             background-color: #7e8d85;
             color: #f0f7f4;
           }
+          &.fullscreen {
+            display: flex;
+            flex-direction: column;
+            font-size: 25px;
+            max-width: none;
+            height: 100%;
+            color: #3c493f;
+            border-color: #3c493f;
+            font-family: "Ubuntu Sans Mono", monospace;
+            background-color: none;
+            .text {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: center;
+            }
+            &.none {
+              display: none;
+            }
+            p:nth-of-type(even) {
+              font-size: 15px;
+            }
+            svg {
+              width: 200px;
+              height: 200px;
+            }
+          }
         }
         @media screen and (orientation: landscape) {
-          height: 80%;
+          height: 100%;
           gap: 10px;
-          button:first-of-type {
-            height: 80%;
+          button.fullscreen {
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            width: auto;
           }
         }
       }

@@ -4,6 +4,7 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [firstInfo, setFirstInfo] = useState(true);
 
   const [screen, setScreen] = useState("chooseMode");
   const [mode, setMode] = useState("");
@@ -376,6 +377,8 @@ export const AppProvider = ({ children }) => {
     betaAngle,
     gammaAngle,
     toggleFullscreen,
+    firstInfo,
+    setFirstInfo,
   };
 
   useEffect(() => {
