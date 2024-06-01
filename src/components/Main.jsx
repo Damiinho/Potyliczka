@@ -17,20 +17,25 @@ const Main = () => {
     simpleAlert({
       message: (
         <div
-          style={{ fontFamily: "Ubuntu Sans Mono, monospace", fontSize: 15 }}
+          style={{
+            fontFamily: "Ubuntu Sans Mono, monospace",
+            fontSize: 15,
+          }}
         >
-          <div>
-            1. Szybkość – zgadnij jak najwięcej haseł w ciągu z góry określonego
-            czasu rundy
+          <div style={{ margin: "20px 0" }}>
+            <p style={{ marginBottom: 10 }}>
+              <strong>Szybkość</strong> – zgadnij jak najwięcej haseł w ciągu z
+              góry określonego czasu rundy
+            </p>
+            <p>
+              <strong>Wytrwałość</strong>– zdobądź jak najwięcej poprawnych
+              odpowiedzi z rzędu w określonym czasie na każde hasło
+            </p>
           </div>
-          <div>
-            2. Wytrwałość – zdobądź jak najwięcej poprawnych odpowiedzi z rzędu
-            w określonym czasie na każde hasło
-          </div>
-          <h3>Jak grać?</h3>
-          <div>
-            Użyj przycisków lub pochyl ekran w dół, by zatwierdzic lub w górę,
-            by pominąć
+          <h1> Jak grać?</h1>
+          <div style={{ margin: "20px 0" }}>
+            Użyj przycisków lub pochyl ekran w dół, by zatwierdzić odpowiedź,
+            albo w górę, by pominąć hasło
           </div>
         </div>
       ),
@@ -42,6 +47,7 @@ const Main = () => {
           Tryby gry
         </div>
       ),
+      stule: { maxWidth: "90%" },
     });
 
   return (
@@ -90,7 +96,7 @@ const Main = () => {
           <p>grać?</p>
         </Button>
       </ButtonGroup>
-      <SimpleDialogContainer />
+      <SimpleDialogContainer style={{ width: 1500 }} />
 
       {screen === null || screen === "chooseMode" ? (
         <ChooseMode />
