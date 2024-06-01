@@ -11,7 +11,6 @@ const ChooseMode = () => {
     useContext(AppContext);
   return (
     <main className="mode">
-      {/* <div className="mode-title">Wybierz tryb</div> */}
       <div className="mode-buttons">
         {firstInfo ? (
           <Button

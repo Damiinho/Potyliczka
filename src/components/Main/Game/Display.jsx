@@ -161,6 +161,38 @@ const Display = () => {
     }
   }, [isGood, isSkip, betaAngle, gammaAngle, handleGoodAnswer, handleSkip]);
 
+  const TimeComponent = () => (
+    <div className="game-time">
+      <div
+        className="game-time__inside"
+        style={{
+          width: `${
+            (currentTime /
+              (mode === "speed"
+                ? speedTime
+                : mode === "effort"
+                ? effortTime
+                : null)) *
+            100
+          }%`,
+        }}
+      ></div>
+      <p>{currentTime.toFixed(1)}s</p>
+    </div>
+  );
+
+  const TopicComponent = () => (
+    <div className="game-topic">
+      <div className="game-topic__name">{currentTopic.name}</div>
+      <div className="game-topic__category">
+        Kategoria:{" "}
+        {currentTopic.category.map((item) => {
+          return <span key={item}>{item}</span>;
+        })}
+      </div>
+    </div>
+  );
+
   return (
     <main className={`game ${isGood ? "good" : isSkip ? "skip" : ""}`}>
       {isGood ? (
@@ -169,32 +201,8 @@ const Display = () => {
         <div className="game-result">pomijam</div>
       ) : (
         <>
-          <div className="game-time">
-            <div
-              className="game-time__inside"
-              style={{
-                width: `${
-                  (currentTime /
-                    (mode === "speed"
-                      ? speedTime
-                      : mode === "effort"
-                      ? effortTime
-                      : null)) *
-                  100
-                }%`,
-              }}
-            ></div>
-            <p>{currentTime.toFixed(1)}s</p>
-          </div>
-          <div className="game-topic">
-            <div className="game-topic__name">{currentTopic.name}</div>
-            <div className="game-topic__category">
-              Kategoria:{" "}
-              {currentTopic.category.map((item) => {
-                return <span key={item}>{item}</span>;
-              })}
-            </div>
-          </div>
+          <TimeComponent />
+          <TopicComponent />
           <div className="game-buttons">
             <Button
               variant="contained"
