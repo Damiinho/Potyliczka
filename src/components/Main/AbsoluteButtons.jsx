@@ -5,7 +5,8 @@ import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import { SimpleDialogContainer, simpleAlert } from "react-simple-dialogs";
 
 const AbsoluteButtons = () => {
-  const { firstInfo, isStarted, toggleFullscreen } = useContext(AppContext);
+  const { firstInfo, isStarted, toggleFullscreen, isLandscape } =
+    useContext(AppContext);
 
   const alert = () =>
     simpleAlert({
@@ -47,7 +48,7 @@ const AbsoluteButtons = () => {
   return (
     <>
       <ButtonGroup
-        orientation="vertical"
+        orientation={isLandscape ? "horizontal" : "vertical"}
         style={{
           position: "absolute",
           top: 20,
