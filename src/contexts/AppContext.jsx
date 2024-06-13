@@ -1822,11 +1822,6 @@ export const AppProvider = ({ children }) => {
       category: ["postacie", "literatura"],
     },
     {
-      name: "Julian Tuwim",
-      active: true,
-      category: ["postacie", "literatura"],
-    },
-    {
       name: "Juliusz Słowacki",
       active: true,
       category: ["postacie", "literatura"],
@@ -1840,11 +1835,6 @@ export const AppProvider = ({ children }) => {
       name: "Justin Bieber",
       active: true,
       category: ["postacie", "muzyka"],
-    },
-    {
-      name: "Justyna Kowalczyk",
-      active: true,
-      category: ["postacie", "sport"],
     },
     {
       name: "Justyna Kowalczyk",
@@ -1990,11 +1980,6 @@ export const AppProvider = ({ children }) => {
       name: "Klocuch",
       active: true,
       category: ["postacie", "muzyka", "internet"],
-    },
-    {
-      name: "Klocuch12",
-      active: true,
-      category: ["postacie", "internet"],
     },
     {
       name: "Kocia ferajna",
@@ -2362,7 +2347,7 @@ export const AppProvider = ({ children }) => {
       category: ["postacie", "historia"],
     },
     {
-      name: "Maqbol",
+      name: "Maqbool",
       active: true,
       category: ["filmy", "kino/tv"],
     },
@@ -2440,6 +2425,11 @@ export const AppProvider = ({ children }) => {
       name: "Mata",
       active: true,
       category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Marcin Matczak",
+      active: true,
+      category: ["postacie", "polityka"],
     },
     {
       name: "Matka Teresa z Kalkuty",
@@ -2607,7 +2597,7 @@ export const AppProvider = ({ children }) => {
       category: ["animacje", "kino/tv"],
     },
     {
-      name: "Na Wspólne",
+      name: "Na Wspólnej",
       active: true,
       category: ["seriale", "kino/tv"],
     },
@@ -2640,6 +2630,11 @@ export const AppProvider = ({ children }) => {
       name: "Neil Armstrong",
       active: true,
       category: ["postacie", "historia"],
+    },
+    {
+      name: "Lance Armstrong",
+      active: true,
+      category: ["postacie", "sport"],
     },
     {
       name: "Nelson Mandela",
@@ -2737,19 +2732,14 @@ export const AppProvider = ({ children }) => {
       category: ["animacje", "kino/tv"],
     },
     {
-      name: "Odlotowe agentki",
-      active: true,
-      category: ["animacje", "kino/tv"],
-    },
-    {
       name: "Ogniem i mieczem",
       active: true,
       category: ["filmy", "kino/tv"],
     },
     {
-      name: "Ojciec chrzestny",
+      name: "Ojciec chrzestny (seria)",
       active: true,
-      category: ["filmy", "kino/tv"],
+      category: ["filmy", "kino/tv", "literatura"],
     },
     {
       name: "Olga Tokarczuk",
@@ -2794,12 +2784,12 @@ export const AppProvider = ({ children }) => {
     {
       name: "Pan Taduesz",
       active: true,
-      category: ["filmy", "kino/tv"],
+      category: ["filmy", "kino/tv", "literatura"],
     },
     {
       name: "Pan Wołodyjowski",
       active: true,
-      category: ["filmy", "kino/tv"],
+      category: ["filmy", "kino/tv", "literatura"],
     },
     {
       name: "Papież Franciszek",
@@ -2887,11 +2877,6 @@ export const AppProvider = ({ children }) => {
       category: ["postacie", "kino/tv", "muzyka"],
     },
     {
-      name: "Piotr Fronczewski",
-      active: true,
-      category: ["postacie", "kino/tv"],
-    },
-    {
       name: "Piotr Kupicha",
       active: true,
       category: ["postacie", "muzyka"],
@@ -2929,7 +2914,7 @@ export const AppProvider = ({ children }) => {
     {
       name: "Piłkarski poker",
       active: true,
-      category: ["filmy", "kino/tv"],
+      category: ["filmy", "kino/tv", "sport"],
     },
     {
       name: "Plebania",
@@ -2994,7 +2979,7 @@ export const AppProvider = ({ children }) => {
     {
       name: "Potop",
       active: true,
-      category: ["filmy", "kino/tv"],
+      category: ["filmy", "kino/tv", "literatura"],
     },
     {
       name: "Potwory i spółka",
@@ -3517,11 +3502,6 @@ export const AppProvider = ({ children }) => {
       category: ["postacie", "muzyka"],
     },
     {
-      name: "Taco Hemingway",
-      active: true,
-      category: ["postacie", "muzyka"],
-    },
-    {
       name: "Tadeusz Kościuszko",
       active: true,
       category: ["postacie", "polityka", "historia"],
@@ -3557,11 +3537,6 @@ export const AppProvider = ({ children }) => {
       category: ["seriale", "kino/tv"],
     },
     {
-      name: "Teoria wielkiego podrywy",
-      active: true,
-      category: ["seriale", "kino/tv"],
-    },
-    {
       name: "Terminator (seria)",
       active: true,
       category: ["filmy", "kino/tv"],
@@ -3574,7 +3549,12 @@ export const AppProvider = ({ children }) => {
     {
       name: "The Beatles",
       active: true,
-      category: ["postacie", "muzyka"],
+      category: ["muzyka"],
+    },
+    {
+      name: "Ich Troje",
+      active: true,
+      category: ["muzyka"],
     },
     {
       name: "Theodore Roosevelt",
@@ -3744,11 +3724,6 @@ export const AppProvider = ({ children }) => {
     {
       name: "Wiedźmin",
       active: true,
-      category: ["seriale", "kino/tv"],
-    },
-    {
-      name: "Wiedźmin",
-      active: true,
       category: ["postacie", "kino/tv", "literatura"],
     },
     {
@@ -3775,11 +3750,6 @@ export const AppProvider = ({ children }) => {
       name: "William Szekspir",
       active: true,
       category: ["postacie", "literatura"],
-    },
-    {
-      name: "Winston Churchill",
-      active: true,
-      category: ["postacie", "historia"],
     },
     {
       name: "Winston Churchill",
@@ -3967,7 +3937,7 @@ export const AppProvider = ({ children }) => {
       category: ["animacje", "kino/tv"],
     },
     {
-      name: "korespondent Bryan",
+      name: "Korespondent Bryan",
       active: true,
       category: ["filmy", "kino/tv"],
     },
@@ -4045,6 +4015,276 @@ export const AppProvider = ({ children }) => {
       name: "Żądło",
       active: true,
       category: ["filmy", "kino/tv"],
+    },
+    {
+      name: "Prostracja",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "MrBeast",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "PewDiePie",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Paweł Svinarski",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Ojwojtek",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Wykop.pl",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Facebook",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Twitter / X",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Karachan",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "4chan",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Reddit",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Instagram",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "TikTok",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "YouTube",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "kurnik.pl",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Grono.net",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Nasza Klasa (nk.pl)",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "LinkedIn",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Onet.pl",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Wp.pl",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "GMail",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Yahoo",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Chrome",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Firefox",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Bazyland",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Śpiewające Brzdące",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "czvjnik",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "GENZIE",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Team X",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Masza i Niedźwiedź",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "BEKSY",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Abstrachuje",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "PatecWariatec",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Fit  Lovers",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Niekryty krytyk",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Maciej Dąbrowski (Człowiek warga), z dvpy",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Mini Majk",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Krzysztof Kononowicz",
+      active: true,
+      category: ["postacie", "internet", "polityka"],
+    },
+    {
+      name: "Historia bez cenzury",
+      active: true,
+      category: ["internet", "polityka"],
+    },
+    {
+      name: "Damianero",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Cyber Marian",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Weronika Truszczyńska",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Jak będzie w akapie (JBWA)",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Janusz",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Grażyna",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Typowy Seba",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Karyna",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Nosacz sundajski",
+      active: true,
+      category: ["internet", "zwierzęta"],
+    },
+    {
+      name: "WATAHA - Krulestwo",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Demotywatory",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Nonsensopedia",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Wikipedia",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Mamiko",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Marcin Dubiel",
+      active: true,
+      category: ["postacie", "internet"],
     },
   ]);
   const [category, setCategory] = useState([
