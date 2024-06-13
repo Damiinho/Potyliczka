@@ -1196,7 +1196,11 @@ export const AppProvider = ({ children }) => {
       active: true,
       category: ["postacie", "historia"],
     },
-    { name: "Lech Wałęsa", active: true, category: ["postacie", "historia"] },
+    {
+      name: "Lech Wałęsa",
+      active: true,
+      category: ["postacie", "historia", "polityka"],
+    },
     { name: "Mao Zedong", active: true, category: ["postacie", "historia"] },
     { name: "Louis Armstrong", active: true, category: ["postacie", "muzyka"] },
     {
@@ -1474,6 +1478,858 @@ export const AppProvider = ({ children }) => {
       active: true,
       category: ["postacie", "muzyka", "kino/tv"],
     },
+
+    {
+      name: "Jan Matejko",
+      active: true,
+      category: ["postacie"],
+    },
+    {
+      name: "Andrzej Wajda",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Roman Polański",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+
+    {
+      name: "Donald Tusk",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Lech Kaczyński",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Jarosław Kaczyński",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Jacek Stachursky",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Kim Dzong Il",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Ludwik Zamenhof",
+      active: true,
+      category: ["postacie", "literatura", "nauka"],
+    },
+    {
+      name: "Jan Heweliusz",
+      active: true,
+      category: ["postacie", "nauka"],
+    },
+    {
+      name: "Tadeusz Kościuszko",
+      active: true,
+      category: ["postacie", "polityka", "historia"],
+    },
+    {
+      name: "Barack Obama",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Donald Trump",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Witold Pilecki",
+      active: true,
+      category: ["postacie", "historia"],
+    },
+    {
+      name: "Andrzej Gołota",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Justyna Kowalczyk",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Kornel Makuszyński",
+      active: true,
+      category: ["postacie", "literatura"],
+    },
+    {
+      name: "Mieszko I",
+      active: true,
+      category: ["postacie", "historia"],
+    },
+    {
+      name: "Bolesław Chrobry",
+      active: true,
+      category: ["postacie", "historia"],
+    },
+    {
+      name: "Jan III Sobieski",
+      active: true,
+      category: ["postacie", "historia"],
+    },
+    {
+      name: "Stanisław August Poniatowski",
+      active: true,
+      category: ["postacie", "historia"],
+    },
+    {
+      name: "Czesław Miłosz",
+      active: true,
+      category: ["postacie", "literatura"],
+    },
+    {
+      name: "Mata",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Peja",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Tede",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Ignacy Paderewski",
+      active: true,
+      category: ["postacie", "muzyka", "polityka", "historia"],
+    },
+    {
+      name: "Henryk Sienkiewicz",
+      active: true,
+      category: ["postacie", "literatura"],
+    },
+    {
+      name: "Julian Tuwim",
+      active: true,
+      category: ["postacie", "literatura"],
+    },
+    {
+      name: "Jan Twardowski",
+      active: true,
+      category: ["postacie", "religia", "literatura"],
+    },
+    {
+      name: "Józef Piłsudski",
+      active: true,
+      category: ["postacie", "polityka", "historia"],
+    },
+    {
+      name: "Tomasz Edison",
+      active: true,
+      category: ["postacie", "nauka"],
+    },
+    {
+      name: "Janusz Korwin-Mikke",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Grzegorz Braun",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Leonardo da Vinci",
+      active: true,
+      category: ["postacie", "nauka"],
+    },
+    {
+      name: "Hans Christian Andersen",
+      active: true,
+      category: ["postacie", "literatura"],
+    },
+    {
+      name: "Elon Musk",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Bill Gates",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Nikola Tesla",
+      active: true,
+      category: ["postacie", "nauka"],
+    },
+    {
+      name: "Elżbieta II",
+      active: true,
+      category: ["postacie", "polityka", "historia"],
+    },
+    {
+      name: "Sylvester Stallone",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Leonardo DiCaprio",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Lady Gaga",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Justin Bieber",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Britney Spears",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Arnold Schwarzenegger",
+      active: true,
+      category: ["postacie", "polityka", "kino/tv"],
+    },
+    {
+      name: "Taylor Swift",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Miley Cyrus",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Mark Zuckerberg",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Benedykt XVI",
+      active: true,
+      category: ["postacie", "polityka", "religia"],
+    },
+    {
+      name: "Papież Franciszek",
+      active: true,
+      category: ["postacie", "polityka", "religia"],
+    },
+    {
+      name: "Eddie Murphy",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Johnny Depp",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Brad Pitt",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Shaquille O'Neal",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Eminem",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Brodka",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Sanah",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Dawid Podsiadło",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Taco Hemingway",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Mezo",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Kamil Bednarek",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Kayah",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Roxie Węgiel",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Pezet",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Young Leosia",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Cleo",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Quebonafide",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Sobel",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Michał Szpak",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Vito Bambino",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Cypis",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Popek",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Krzysztof Krawczyk",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Piotr Rubik",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Piotr Kupicha",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Artur Andrus",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "O.S.T.R.",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Katarzyna Nosowska",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Kazik Staszewski",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Anna Maria Jopek",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Beata Kozidrak",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Majka Jeżowska",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Andrea Bocelli",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Freddie Mercury",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Elton John",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Madonna",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Mahomet",
+      active: true,
+      category: ["postacie", "religia"],
+    },
+    {
+      name: "Jacek Kaczmarski",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Włodzimierz Wysocki",
+      active: true,
+      category: ["postacie", "muzyka", "kino/tv"],
+    },
+    {
+      name: "Cezary Pazura",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Bogusław Linda",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Andrzej Grabowski",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Céline Dion",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Zbigniew Hołdys",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Zbigniew Buczkowski",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Roman Giertych",
+      active: true,
+      category: ["postacie", "polityka"],
+    },
+    {
+      name: "Artur Barciś",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Cezary Żak",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Joaquin Phoenix",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Will Smith",
+      active: true,
+      category: ["postacie", "kino/tv", "muzyka"],
+    },
+    {
+      name: "Humphrey Bogart",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Katharine Hepburn",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Marlon Brando",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Charlie Chaplin",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Robert De Niro",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Clint Eastwood",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Tom Hanks",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Benedict Cumberbatch",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Christian Bale",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Daniel Craig",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Roger Moore",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Janusz Gajos",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Jerzy Stuhr",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Krystyna Janda",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Franciszek Pieczka",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Daniel Olbrychski",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Marek Perepeczko",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Eugeniusz Bodo",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Maciej Stuhr",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Jacek Braciak",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Leon Niemczyk",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Robert Więckiewicz",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Gustaw Holoubek",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Tomasz Kot",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Piotr Fronczewski",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Marek Kondrat",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Agnieszka Włodarczyk",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Anna Przybylska",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Michał Milowicz",
+      active: true,
+      category: ["postacie", "kino/tv", "muzyka"],
+    },
+    {
+      name: "Paweł Deląg",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Michał Żebrowski",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Friz",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Wersow",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Anna Lewandowska",
+      active: true,
+      category: ["postacie", "internet", "sport"],
+    },
+    {
+      name: "Prawo Marcina",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Julia Żugaj",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Natsu",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Doda",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Michał Wiśniewski",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Martyna Wojciechowska",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Sylwester Wardęga",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Stuu Burton",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Książulo",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Maffashion",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Marta Kruk (Codziennie fit)",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Jessica Mercedes",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Hubert Urbański",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Krzysztof Ibisz",
+      active: true,
+      category: ["postacie", "kino/tv"],
+    },
+    {
+      name: "Remigiusz Wierzgoń (reZi)",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Mandzio",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Radosław Kotarski",
+      active: true,
+      category: ["postacie", "internet", "nauka"],
+    },
+    {
+      name: "CeZik",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "AJ",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Konopskyy",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Blonsky",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Blowek",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Lexy Chaplin",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Dawid Myśliwiec",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Robert Pasut",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Klocuch12",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Gimper",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Lord Kruszwil",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Kamerzysta",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Red Lipstick Monster",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Martin Stankiewicz",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Krzysztof Stanowski",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "AdBuster",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "SciFun",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "JDabrowsky",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Boxdel",
+      active: true,
+      category: ["postacie", "internet"],
+    },
   ]);
   const [category, setCategory] = useState([
     { name: "ludzie", active: false },
@@ -1483,7 +2339,7 @@ export const AppProvider = ({ children }) => {
     { name: "animacje", active: false },
     { name: "internet", active: false },
     { name: "przysłowia", active: false },
-    { name: "posiacie", active: false },
+    { name: "postacie", active: false },
     { name: "muzyka", active: false },
     { name: "sport", active: false },
     { name: "historia", active: false },
