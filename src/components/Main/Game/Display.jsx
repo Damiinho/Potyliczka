@@ -19,6 +19,8 @@ const Display = () => {
     speedTime,
     effortTime,
     mode,
+    playSuccessSound,
+    playFailSound,
   } = useContext(AppContext);
 
   const updateTopicActiveStatus = useCallback(
@@ -36,6 +38,7 @@ const Display = () => {
     if (currentTime <= 0) {
       setIsStarted(false);
       setScreen("theend");
+      playFailSound();
     }
 
     const timer = setInterval(() => {
@@ -56,6 +59,7 @@ const Display = () => {
     setScreen,
     currentTopic.name,
     updateTopicActiveStatus,
+    playFailSound,
   ]);
 
   const [isGood, setIsGood] = useState(false);
@@ -63,6 +67,7 @@ const Display = () => {
 
   const handleGoodAnswer = useCallback(() => {
     currentList[currentList.length - 1].good = true;
+    playSuccessSound();
 
     if (activeFilteredTopics.length === 0) {
       setScreen("theend");
@@ -88,9 +93,11 @@ const Display = () => {
     setCurrentTopic,
     setScreen,
     updateTopicActiveStatus,
+    playSuccessSound,
   ]);
 
   const handleSkip = useCallback(() => {
+    playFailSound();
     if (activeFilteredTopics.length === 0) {
       setScreen("theend");
     } else {
@@ -109,6 +116,7 @@ const Display = () => {
     setCurrentTopic,
     setScreen,
     updateTopicActiveStatus,
+    playFailSound,
   ]);
 
   useEffect(() => {

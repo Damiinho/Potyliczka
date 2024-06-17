@@ -5,6 +5,14 @@ import PropTypes from "prop-types";
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+  const playSuccessSound = () => {
+    const audio = new Audio("/sounds/success.wav");
+    audio.play();
+  };
+  const playFailSound = () => {
+    const audio = new Audio("/sounds/fail.mp3");
+    audio.play();
+  };
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const isLandscape = useMediaQuery("(orientation: landscape)");
@@ -4286,6 +4294,371 @@ export const AppProvider = ({ children }) => {
       active: true,
       category: ["postacie", "internet"],
     },
+    {
+      name: "Daniel Magical",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Poker Face",
+      active: true,
+      category: ["internet", "muzyka"],
+    },
+    {
+      name: "Pedobear",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Nyan Cat",
+      active: true,
+      category: ["internet", "zwierzęta"],
+    },
+    {
+      name: "Latający potwór spaghetti",
+      active: true,
+      category: ["internet", "religia"],
+    },
+    {
+      name: "Przypadek? Nie sądzę",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "kasiu wruć",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "powrut (Kubicy)",
+      active: true,
+      category: ["internet"],
+    },
+    {
+      name: "Queen",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Linkin Park",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Dżem",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "The Beatles",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Lady Pank",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Happysad",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "The Rolling Stones",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "The Animals",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Abba",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Raz, Dwa, Trzy",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "T.Love",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Strachy na lachy",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Czerwone gitary",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Red Hot Chilli Peppers",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "U2",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Just V",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Bob Marley",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Black Sabbath",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Led Zeppelin",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "AC/DC",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Metallica",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Nirvana",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Guns N' Roses",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Pink Floyd",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Iron Maiden",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "The Doors",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Aerosmith",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Rammstein",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Marilyn Manson",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Green Day",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Budka Suflera",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Marian Lichtman",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Krzysztof Cugowski",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Perfect",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Bajm",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Varius Manx",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Stan Borys",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Wilki",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Zbigniew Wodecki",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Edyta Geppert",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Maanam",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Kombi(i)",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Papa Dance",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Robert Gawliński",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Artur Rojek",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Myslovitz",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "De Mono",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Elektryczne Gitary",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Czesław Niemen",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Blue Cafe",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Sistars",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Hey",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Edyta Górniak",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Maryla Rodowicz",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Marek Biliński",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Marek Grechuta",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Violetta Villas",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Feel",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Adele",
+      active: true,
+      category: ["postacie", "muzyka"],
+    },
+    {
+      name: "Liroy",
+      active: true,
+      category: ["postacie", "polityka", "muzyka"],
+    },
+    {
+      name: "Gang Albanii",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Kaliber 44",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Paweł Kukiz",
+      active: true,
+      category: ["postacie", "polityka", "muzyka"],
+    },
+    {
+      name: "Coma",
+      active: true,
+      category: ["muzyka"],
+    },
+    {
+      name: "Kult",
+      active: true,
+      category: ["muzyka"],
+    },
   ]);
   const [category, setCategory] = useState([
     { name: "ludzie", active: false },
@@ -4423,6 +4796,8 @@ export const AppProvider = ({ children }) => {
     toggleFullscreen,
     firstInfo,
     setFirstInfo,
+    playSuccessSound,
+    playFailSound,
   };
 
   useEffect(() => {
