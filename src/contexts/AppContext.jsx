@@ -2287,6 +2287,461 @@ export const AppProvider = ({ children }) => {
       category: ["sport"],
     },
     {
+      name: "Krykiet",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Golf",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Punkt K",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Bula",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rekord skoczni",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rekord świata",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Lekkoatletyka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rzut oszczepem",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Kajak",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Pływanie",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Strongman",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Podnoszenie ciężarów",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Boks",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Szachoboks",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Szachy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Żużel",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "MMA",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Szachy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rzut za 3 punkty",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rzut osobisty",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "As serwisowy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Biathlon",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Kolarstwo",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rugby",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Unihokej",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Hokej na lodzie",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Łyżwy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Polo",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Hipodrom",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Baseball",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Sanki",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Kręgle",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Piłka wodna",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Maraton",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Karate",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Czarny pas",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Nokaut",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Sędzia",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Sędzia-kalosz",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Wychowanie fizyczne",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Gogle",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Czepek kąpielowy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Czerwona kartka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Żółta kartka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Deskorolka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rolki",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Żółta koszulka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Gwizdek",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Boisko",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Kort",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Lodowisko",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Narty",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Piłka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Pole golfowe",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rakieta tenisowa",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Ringo",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Ring",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Ringo",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rower",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Skakanka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Żeglarstwo",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Nurkowanie",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Net",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Bieżnia",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Łucznictwo",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Tenis stołowy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Siatkówka plażowa",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Wspinaczka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Snowboard",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Warcaby",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Szach-mat",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Szachownica",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Mistrz",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Trener",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Kibice",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Kij golfowy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Hantle",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Mecz",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Skok w dal",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Skok wzwyż",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Sporty ekstremalne",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Skoki do wody",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Brydż",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Jan-Krzysztof Duda",
+      active: true,
+      category: ["sport", "postacie"],
+    },
+    {
+      name: "Magnus Carlsen",
+      active: true,
+      category: ["sport", "postacie"],
+    },
+    {
+      name: "Handicap",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Reprezetnacja",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Klub sportowy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Pchnięcie kulą",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Bieg na 100 metrów przez płotki",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Skoki narciarskie",
+      active: true,
+      category: ["sport"],
+    },
+    {
       name: "Mistrzostwa świata",
       active: true,
       category: ["sport"],
