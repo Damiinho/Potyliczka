@@ -17,7 +17,9 @@ export const AppProvider = ({ children }) => {
 
   const isLandscape = useMediaQuery("(orientation: landscape)");
 
-  const [firstInfo, setFirstInfo] = useState(true);
+  const [firstInfo, setFirstInfo] = useState(() => {
+    return window.matchMedia("(pointer: coarse)").matches;
+  });
 
   const [screen, setScreen] = useState("chooseMode");
   const [mode, setMode] = useState("");
@@ -305,6 +307,166 @@ export const AppProvider = ({ children }) => {
       category: ["postacie", "nauka"],
     },
     {
+      name: "Konfederacja",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Prawoo i Sprawiedliwość",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Lewica",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Prawica",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Konstytucja",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Bazarek",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Cisza wyborcza",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Kiełbasa wyborcza",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Symetryzm",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Unia Europejska",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "PolExit",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Faszyzm",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Komunizm",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Libertarianizm",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Konserwatyzm",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Kara śmierci",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Aborcja",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Eutanazja",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Demokracja",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Monarchia",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Rodzina królewska",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Rząd",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Opozycja",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Premier",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Prezydent",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Rada ministrów",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Sejm",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Senat",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Wolna elekcja",
+      active: true,
+      category: ["polityka", "historia"],
+    },
+    {
+      name: "Autonomia Palestyńska",
+      active: true,
+      category: ["polityka", "geografia"],
+    },
+    {
+      name: "Poprawność polityczna",
+      active: true,
+      category: ["polityka"],
+    },
+    {
+      name: "Platforma Obywatelska",
+      active: true,
+      category: ["polityka"],
+    },
+    {
       name: "Arnold Schwarzenegger",
       active: true,
       category: ["postacie", "polityka", "kino/tv"],
@@ -461,6 +623,16 @@ export const AppProvider = ({ children }) => {
     },
     {
       name: "Bill Gates",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Daniel Magical",
+      active: true,
+      category: ["postacie", "internet"],
+    },
+    {
+      name: "Julia Wieniawa",
       active: true,
       category: ["postacie", "internet"],
     },
@@ -677,7 +849,7 @@ export const AppProvider = ({ children }) => {
     {
       name: "Całka",
       active: true,
-      category: ["ludzie"],
+      category: ["postacie"],
     },
     {
       name: "CeZik",
@@ -1848,6 +2020,311 @@ export const AppProvider = ({ children }) => {
       name: "Justyna Kowalczyk",
       active: true,
       category: ["postacie", "sport"],
+    },
+    {
+      name: "LeBron James",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Neymar",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Roger Federer",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Tiger Woods",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Rafael Nadal",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Usain Bolt",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Novak Djoković",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Hubert Hurkacz",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Serena Williams",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Andrzej Gołota",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Lewis Hamilton",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Robert Kubica",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Kamil Stoch",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Jerzy Dudek",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Piotr Zyła",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Grzegorz Krychowiak",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Wojciech Szczęsny",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Agnieszka Radwańska",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Dawid Kubacki",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Marcin Gortat",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Mariusz Pudzianowski",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Artur Boruc",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Robert Korzeniowski",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Anita Włodarczyk",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Marcin Najman",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Jakub Błaszczykowski",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Otylia Jędrzejczak",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Tomasz Adamek",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Krzysztof Hołowczyc",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Michael Schumacher",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Tomasz Gollob",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Ewa Swoboda",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Jan Błachowicz",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Łukasz Piszczek",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Irena Szewińska",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Jerzy Kulej",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Kazimierz Deyna",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Grzegorz Lato",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Władysław Kozakiewicz",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Zbigniew Boniek",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Szymon Marciniak",
+      active: true,
+      category: ["postacie", "sport"],
+    },
+    {
+      name: "Piłka nożna",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Koszykówka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Siatkówka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Spalony",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Pole karne",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rzut karny",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Tenis ziemny",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Serwis",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Aut",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Poprzeczka",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rzut sędziowski",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Blok",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Mistrzostwa świata",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Igrzyska olimpijskie",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Mistrzostwa Europy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Stadion olimpijski",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Stadion Narodowy",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Stadion dziesięciolecia",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Rzut rożny",
+      active: true,
+      category: ["sport"],
+    },
+    {
+      name: "Mariusz Wlazły",
+      active: true,
+      category: ["sport", "postacie"],
     },
     {
       name: "Józef Piłsudski",
@@ -3252,7 +3729,7 @@ export const AppProvider = ({ children }) => {
     {
       name: "Róża Thun",
       active: true,
-      category: ["ludzie"],
+      category: ["postacie", "polityka"],
     },
     {
       name: "Różowe lata siedemdziesiąte",
@@ -4661,7 +5138,6 @@ export const AppProvider = ({ children }) => {
     },
   ]);
   const [category, setCategory] = useState([
-    { name: "ludzie", active: false },
     { name: "filmy", active: false },
     { name: "kino/tv", active: false },
     { name: "seriale", active: false },
@@ -4674,6 +5150,7 @@ export const AppProvider = ({ children }) => {
     { name: "historia", active: false },
     { name: "literatura", active: false },
     { name: "nauka", active: false },
+    { name: "polityka", active: false },
   ]);
 
   const [result, setResult] = useState(0);

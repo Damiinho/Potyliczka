@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import AppProvider from "./contexts/AppContext";
 import NoSleep from "nosleep.js";
+// import Entry from "./components/Entry";
 
 function App() {
   const noSleep = useRef(null);
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
       <AppProvider>
+        {/* <Entry /> */}
         <div className="wrapper">
           <Header />
           <Main />
