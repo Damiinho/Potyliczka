@@ -11,6 +11,18 @@ const ChooseOptions = () => {
     effortTime,
     setEffortTime,
   } = useContext(AppContext);
+
+  const handleSpeed = (amount) => {
+    if (speedTime + amount > 0) {
+      setSpeedTime(speedTime + amount);
+    }
+  };
+  const handleEffort = (amount) => {
+    if (effortTime + amount > 0) {
+      setEffortTime(effortTime + amount);
+    }
+  };
+
   return (
     <main className="options">
       {mode === "speed" ? (
@@ -20,21 +32,31 @@ const ChooseOptions = () => {
             <Button
               variant="outlined"
               color="warning"
-              onClick={() => {
-                setSpeedTime(speedTime - 10);
-              }}
+              onClick={() => handleSpeed(-10)}
             >
-              -10s
+              -10
+            </Button>
+            <Button
+              variant="outlined"
+              color="warning"
+              onClick={() => handleSpeed(-1)}
+            >
+              -
             </Button>
             {speedTime}s
             <Button
               variant="outlined"
               color="success"
-              onClick={() => {
-                setSpeedTime(speedTime + 10);
-              }}
+              onClick={() => handleSpeed(1)}
             >
-              +10s
+              +
+            </Button>
+            <Button
+              variant="outlined"
+              color="success"
+              onClick={() => handleSpeed(+10)}
+            >
+              +10
             </Button>
           </div>
         </div>
@@ -45,9 +67,14 @@ const ChooseOptions = () => {
             <Button
               variant="outlined"
               color="warning"
-              onClick={() => {
-                setEffortTime(effortTime - 1);
-              }}
+              onClick={() => handleEffort(-10)}
+            >
+              -10
+            </Button>
+            <Button
+              variant="outlined"
+              color="warning"
+              onClick={() => handleEffort(-1)}
             >
               -
             </Button>
@@ -55,11 +82,16 @@ const ChooseOptions = () => {
             <Button
               variant="outlined"
               color="success"
-              onClick={() => {
-                setEffortTime(effortTime + 1);
-              }}
+              onClick={() => handleEffort(+1)}
             >
               +
+            </Button>
+            <Button
+              variant="outlined"
+              color="success"
+              onClick={() => handleEffort(+10)}
+            >
+              +10
             </Button>
           </div>
         </div>
