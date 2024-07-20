@@ -122,7 +122,7 @@ const Display = () => {
   useEffect(() => {
     if (window.orientation === 0 || window.orientation === 180) {
       if (betaAngle) {
-        if (!isGood) {
+        if (!isGood && !isSkip) {
           if (betaAngle > 125) {
             setIsGood(true);
           }
@@ -132,7 +132,7 @@ const Display = () => {
             handleGoodAnswer();
           }
         }
-        if (!isSkip) {
+        if (!isSkip && !isGood) {
           if (betaAngle < 50) {
             setIsSkip(true);
           }
@@ -145,7 +145,7 @@ const Display = () => {
       }
     } else {
       if (gammaAngle) {
-        if (!isGood) {
+        if (!isSkip && !isGood) {
           if (gammaAngle > 0 && gammaAngle < 50) {
             setIsGood(true);
           }
@@ -155,7 +155,7 @@ const Display = () => {
             handleGoodAnswer();
           }
         }
-        if (!isSkip) {
+        if (!isSkip && !isGood) {
           if (gammaAngle < 0 && gammaAngle > -45) {
             setIsSkip(true);
           }
@@ -219,11 +219,9 @@ const Display = () => {
             >
               Dobrze
             </Button>
-            {mode === "speed" && (
-              <Button variant="contained" color="error" onClick={handleSkip}>
-                Pomiń
-              </Button>
-            )}
+            <Button variant="contained" color="error" onClick={handleSkip}>
+              Pomiń
+            </Button>
           </div>
         </>
       )}
