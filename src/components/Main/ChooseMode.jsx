@@ -5,6 +5,7 @@ import SpeedIcon from "@mui/icons-material/Speed";
 import PoolIcon from "@mui/icons-material/Pool";
 import HourglassTopIcon from "@mui/icons-material/HourglassTop";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
+import AllInclusiveIcon from "@mui/icons-material/AllInclusive";
 
 const ChooseMode = () => {
   const { setMode, setScreen, toggleFullscreen, firstInfo, setFirstInfo } =
@@ -55,6 +56,18 @@ const ChooseMode = () => {
             >
               <p>Wytrwałość</p>
               <PoolIcon />
+            </Button>
+            <Button
+              className={`mode`}
+              variant="contained"
+              color="warning"
+              onClick={() => {
+                setMode("endless");
+                setScreen("chooseOptions");
+              }}
+            >
+              <p>Bez końca</p>
+              <AllInclusiveIcon />
             </Button>
             <Button
               className={`mode`}
