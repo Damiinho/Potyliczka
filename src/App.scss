@@ -256,6 +256,16 @@
             text-transform: lowercase;
             padding: 5px 0;
           }
+
+          .left,
+          .right {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          }
         }
       }
       .options-next {

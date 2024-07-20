@@ -29,35 +29,39 @@ const ChooseOptions = () => {
         <div className="options-speed">
           <div className="options-speed__title">Ustaw czas</div>
           <div className="options-speed__set">
-            <Button
-              variant="outlined"
-              color="warning"
-              onClick={() => handleSpeed(-10)}
-            >
-              -10
-            </Button>
-            <Button
-              variant="outlined"
-              color="warning"
-              onClick={() => handleSpeed(-1)}
-            >
-              -
-            </Button>
+            <div className="left">
+              <Button
+                variant="outlined"
+                color="warning"
+                onClick={() => handleSpeed(-10)}
+              >
+                -10
+              </Button>
+              <Button
+                variant="outlined"
+                color="warning"
+                onClick={() => handleSpeed(-1)}
+              >
+                -
+              </Button>
+            </div>
             {speedTime}s
-            <Button
-              variant="outlined"
-              color="success"
-              onClick={() => handleSpeed(1)}
-            >
-              +
-            </Button>
-            <Button
-              variant="outlined"
-              color="success"
-              onClick={() => handleSpeed(+10)}
-            >
-              +10
-            </Button>
+            <div className="right">
+              <Button
+                variant="outlined"
+                color="success"
+                onClick={() => handleSpeed(1)}
+              >
+                +
+              </Button>
+              <Button
+                variant="outlined"
+                color="success"
+                onClick={() => handleSpeed(+10)}
+              >
+                +10
+              </Button>
+            </div>
           </div>
         </div>
       ) : mode === "effort" ? (
